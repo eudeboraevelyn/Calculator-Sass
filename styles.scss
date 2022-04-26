@@ -1,0 +1,198 @@
+@import "reset";
+
+* {
+  font-family: $firstFont;
+}
+body {
+  background: $background;
+}
+.container {
+  margin: 0 auto;
+  padding: 19px;
+  width: 390px;
+  height: 844px;
+  background-color: $black;
+  border-radius: 40px;
+
+  &__header {
+    width: 375px;
+    height: 44px;
+    display: flex;
+  }
+
+  &__header-connection {
+    margin-left: 219px;
+    display: flex;
+    align-items: baseline;
+
+    &-1 {
+      width: 3px;
+      height: 4px;
+      background: $white;
+    }
+
+    &-2 {
+      width: 3px;
+      height: 6px;
+      background: $white;
+      margin-left: 1.67px;
+    }
+
+    &-3 {
+      width: 3px;
+      height: 8.33px;
+      background: $white;
+      margin-left: 1.67px;
+    }
+
+    &-4 {
+      width: 3px;
+      height: 10.67px;
+      background: $white;
+      margin-left: 1.67px;
+      margin-right: 5px;
+    }
+  }
+
+  &__header-wifi {
+    margin-right: 5px;
+    display: block;
+
+    &-1 {
+      width: 15.33px;
+      height: 4.76px;
+      background: $white;
+      margin-bottom: 0.25px;
+      border-top-left-radius: 80%;
+      border-top-right-radius: 80%;
+    }
+
+    &-2 {
+      width: 9.99px;
+      height: 3.65px;
+      margin-bottom: 0.25px;
+      background: $white;
+      border-top-left-radius: 80%;
+      border-top-right-radius: 80%;
+      margin-left: 2px;
+    }
+
+    &-3 {
+      width: 4.64px;
+      height: 3.39px;
+      background: $white;
+      border-top-left-radius: 80%;
+      border-top-right-radius: 80%;
+      margin-left: 4px;
+      margin-bottom: 0.25px;
+    }
+  }
+
+  &__header-battery {
+    margin-right: 24px;
+    width: 22px;
+    height: 11.33px;
+    background: $green;
+    opacity: 0.85;
+    border: 1px solid $grey;
+    box-sizing: border-box;
+    border-radius: 2.66667px;
+  }
+}
+
+.calculator {
+  width: 352px;
+
+  &__display {
+    width: 100%;
+  }
+
+  &__display-input {
+    background: transparent;
+    outline: transparent;
+    border: 0;
+    color: $white;
+    font-size: calculator-rem(48);
+    margin-left: 257px;
+    margin-top: 59px;
+    margin-bottom: 33px;
+  }
+
+  &__display-result {
+    width: 44px;
+    height: 41px;
+    color: $grey;
+    font-size: calculator-rem(48);
+    margin-left: 334px;
+    margin-bottom: 20px;
+  }
+
+  &__callback {
+    width: 24px;
+    height: 24px;
+    margin-right: 347px;
+  }
+
+  &__buttons {
+    &--button {
+      background: $darkGrey;
+      color: $white;
+      width: 73px;
+      height: 75px;
+      border-radius: 9px;
+      border: 0;
+      font-size: calculator-rem(36);
+
+      &:hover {
+        background: lighten($darkGrey, 20%);
+      }
+
+      &-background-red {
+        background: $red;
+        text-transform: uppercase;
+
+        &:hover {
+          background: lighten($red, 20%);
+        }
+      }
+
+      &-color-green {
+        color: $green;
+      }
+
+      &-background-green {
+        background: $green;
+        color: $darkGrey;
+
+        &:hover {
+          background: lighten($green, 20%);
+        }
+      }
+    }
+  }
+
+  &__buttons-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+.line {
+  width: 352px;
+  height: 0;
+  border: 1px solid;
+  color: $item;
+  margin-top: 20px;
+  margin-bottom: 25px;
+}
+
+.footer {
+  width: 135px;
+  height: 5px;
+  background: $white;
+  border-radius: 100px;
+  margin-left: calc(50% - 135px / 2);
+  margin-top: 34px;
+}
